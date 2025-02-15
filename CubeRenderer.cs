@@ -19,14 +19,14 @@ public class CubeRenderer
         // Definir los vértices del cubo
         VertexPositionColor[] vertices = new VertexPositionColor[]
         {
-            new(new Vector3(-1, -1, -1), Color.Red),    // 0
+            new(new Vector3(-1, -1, -1), Color.Green),    // 0
             new(new Vector3( 1, -1, -1), Color.Green),  // 1
-            new(new Vector3( 1,  1, -1), Color.Blue),   // 2
-            new(new Vector3(-1,  1, -1), Color.Yellow), // 3
-            new(new Vector3(-1, -1,  1), Color.Cyan),   // 4
-            new(new Vector3( 1, -1,  1), Color.Magenta),// 5
-            new(new Vector3( 1,  1,  1), Color.White),  // 6
-            new(new Vector3(-1,  1,  1), Color.Black)   // 7
+            new(new Vector3( 1,  1, -1), Color.Green),   // 2
+            new(new Vector3(-1,  1, -1), Color.Green), // 3
+            new(new Vector3(-1, -1,  1), Color.Green),   // 4
+            new(new Vector3( 1, -1,  1), Color.Green),// 5
+            new(new Vector3( 1,  1,  1), Color.Green),  // 6
+            new(new Vector3(-1,  1,  1), Color.Green)   // 7
         };
 
         // Índices para los triángulos del cubo

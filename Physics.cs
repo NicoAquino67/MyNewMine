@@ -3,7 +3,10 @@ using Microsoft.Xna.Framework;
 namespace MyNewMine{
     public class Physics{
         private Vector3 velocity = Vector3.Zero;
-        private const float gravity = -9.81f;
+        private const float gravity = -15f;
+        public float Gravity{
+            get { return gravity; }
+        }
         private float groundHeight = 0f;
         private const float terminalVelocity = 50f;
         public void ApplyGravity(ref Vector3 position,ref Vector3 velocity, ref bool isGrounded, float deltaTime){

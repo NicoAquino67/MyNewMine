@@ -14,7 +14,7 @@
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup> 
     <EmbeddedResource Include="Icon.ico">
       <LogicalName>Icon.ico</LogicalName>
     </EmbeddedResource>

@@ -14,10 +14,14 @@ namespace MyNewMine{
         public Quaternion Rotation { get; private set; }
         private float yaw, pitch;
         private Vector3 velocity = Vector3.Zero;
+        public Vector3 Velocity{
+            get { return velocity; }
+            set { velocity = value; }
+            }
         private float Speed = 10f;
         private float acceleration = 25f;
         private float friction = 10f;
-        private float jumpForce = 10f;
+        private float jumpForce = 20f;
         private bool isGrounded = false;
         private Physics physics;
         private float mouseSensitivity = 0.002f;
@@ -43,6 +47,8 @@ namespace MyNewMine{
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             CameraControl();
             Move(deltaTime);
+            velocity.Y += physics.Gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            Position += Velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
             ApplyPhysics(deltaTime);
         }        
         private void CameraControl() {
